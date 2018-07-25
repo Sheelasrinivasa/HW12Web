@@ -1,0 +1,54 @@
+<!Doctype html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="Styles.css">
+            <!--Arrow-->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Weather Report</title>
+            <style>
+                i {
+                border: solid black;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 3px;
+            }
+                .down {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+            body {
+                background-color: turquoise;
+            }
+            </style>
+        </head>
+        <body>
+            <p class="name">WeatherPy</p>
+            <!--Navigation Bar-->
+        <nav class="all-nav">
+            <ul>
+                    <li class="dropdown">
+                            <a href="" class="drop-button">Visualization</a><i class="down"></i>
+                        <div class="dropdown-content">
+                            <a href="temp.html">Temperature</a>
+                            <a href="humidity.html">Humidity</a>
+                            <a href="cloudiness.html">Cloudiness</a>
+                            <a href="windspeed.html">Wind Speed</a>
+                        </div>
+                      </li>
+                      <li><a href="comparison.html">Comparisons</a></li>
+                      <li><a href="data.html">Data</a></li>
+            </ul>
+        </nav>
+            <!--Header-->
+            <h1>Assignment - Weather and Citipy</h1>
+            <hr>
+            <p>Here, the flow is to find unique latitude and longitude coordinates. Then from Citipy, unique city names are identified. For the list of Cities on weather api, key attitubute<br> (temprature, humidity, wind speed and cloudiness) values are fetched. I also have a scatter plot to show a range of coordinates across multiple locations.</p>
+            <h2>Limitations</h2>
+            <ol>
+                <li>Some City names on Citipy dont exist on Weather app. To handle this, I am fetching 575 city names from which I will drop the cities not on weather app.<br> Hence, I will have a little more than 500 city names in the list.</li>
+                <li>Inspite of restricting the duplicate city names, there are still a few. I have introduced a function later to delete duplicate cities.</li>
+            </ol>
+
+        </body>
+    </html>
